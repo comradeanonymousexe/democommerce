@@ -1,19 +1,33 @@
 /.phpunit.cache
+
+# Run npm install && npm run dev for this
 /node_modules
+
+# Php artisan storage:link
 /public/build
 /public/hot
 /public/storage
+
+# php artisan key:generate
 /storage/*.key
+
+# Composer install
 /vendor
+
+# Get from .env.example
 .env
 .env.backup
 .env.production
 .phpunit.result.cache
+
+# Homestead is not necessary. We will use valet or php artisan serve.
 Homestead.json
 Homestead.yaml
 auth.json
 npm-debug.log
 yarn-error.log
+
+# NO need
 /.fleet
 /.idea
 /.vscode
