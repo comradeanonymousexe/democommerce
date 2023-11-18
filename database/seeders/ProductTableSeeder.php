@@ -8,7 +8,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Product;
 
-class ProductsTableSeeder extends Seeder
+class ProductTableSeeder extends Seeder
 {
     public function run()
     {
