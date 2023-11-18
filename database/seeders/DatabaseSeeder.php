@@ -28,7 +28,8 @@ class DatabaseSeeder extends Seeder
             ProductTableSeeder::class,
             PaymentsTableSeeder::class,
             OrderDetailsTableSeeder::class,
-            UserTableSeeder::class
+            UserTableSeeder::class,
+            CartItemsTableSeeder::class
             // Add more seeders as needed
         ]);
     }
