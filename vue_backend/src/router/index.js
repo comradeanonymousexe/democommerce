@@ -9,6 +9,7 @@ import ResetPassword from "../views/ResetPassword.vue";
 import AppLayout from "../components/AppLayout.vue";
 import Products from "../views/Products/Products.vue";
 import NotFound from "../views/NotFound.vue";
+import store from "../store/index.js";
 
 // import GuestLayout from "../components/GuestLayout.vue";
 
@@ -42,7 +43,10 @@ const routes = [
     {
         path: '/login',
         name: 'login',
-        component: Login
+        component: Login,
+        meta: {
+            requiresGuest: true
+        }
     },
     
     {
@@ -80,5 +84,17 @@ const router = createRouter({
     history: createWebHistory(),
     routes
 });
+
+router.beforeEach((to, from, next) => {
+    if (to.meta.requiresAuth && !store.state.user.token) {
+      next({name: 'login'})
+    } else if (to.meta.requiresGuest && store.state.user.token) {
+      next({name: 'app.dashboard'})
+    } else {
+      next();
+    }
+  })
+  
+  
 
 export default router;  
