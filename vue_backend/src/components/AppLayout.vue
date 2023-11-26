@@ -5,7 +5,10 @@
       <!--/    Sidebar-->
   
       <div class="flex-1">
+        <!--navbar-->
         <Navbar @toggle-sidebar="toggleSidebar"></Navbar>
+        <!--/navbar-->
+        
         <!--      Content-->
         <main class="p-6">
           <router-view></router-view>
