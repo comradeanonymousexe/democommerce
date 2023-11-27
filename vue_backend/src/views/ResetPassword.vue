@@ -1,5 +1,5 @@
 <template>
-  <GuestLayout title="Sign In if you havent">
+  <GuestLayout title="Reset Passwd">
 
     <form class="space-y-6" method="POST">
 

@@ -1,4 +1,10 @@
 <script setup>
+
+
+  // This file gotta be deleted, but looks good tho.
+
+
+  
 import { ref, computed} from 'vue'
 import store from '../store'
 
