@@ -4,15 +4,9 @@ import {createRouter, createWebHistory} from "vue-router";
 import Dashboard from "../views/Dashboard.vue";
 import Login from "../views/Login.vue";
 import Registration from "../views/Registration.vue";
-import RequestPassword from "../views/RequestPassword.vue";
-import ResetPassword from "../views/ResetPassword.vue";
-import AppLayout from "../components/AppLayout.vue";
-import Products from "../views/Products/Products.vue";
-import NotFound from "../views/NotFound.vue";
-import store from "../store/index.js";
-
-// import GuestLayout from "../components/GuestLayout.vue";
-
+import Abcd from "../views/Abcd.vue";
+import RequestPassword from "../views/RequestPassword.vue"
+import ResetPassword from "../views/ResetPassword.vue"
 
 const routes = [
     {
@@ -57,27 +51,21 @@ const routes = [
     },
     
     {
-        path: '/request-password',
-        name: 'requestPassword',
-        component: RequestPassword,
-        meta: {
-          requiresGuest: true
-        }
-    },
-    
-    {
-        path: '/reset-password/:token',
-        name: 'resetPassword',
-        component: ResetPassword,
-        meta: {
-          requiresGuest: true
-        }
+        path: "/abcd",
+        name: "abcd",
+        component: Abcd
     },
     {
-        path: '/:pathMatch(.*)',
-        name: 'notfound',
-        component: NotFound,
-    }
+        path: "/request-password",
+        name: "request-password",
+        component: RequestPassword
+    },
+    {
+    path: "/reset-password",
+    name: "reset-password",
+    component: ResetPassword
+},
+
 ];
 
 const router = createRouter({
