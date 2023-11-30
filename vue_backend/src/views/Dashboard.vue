@@ -2,6 +2,9 @@
 <template>
     <div class="dashboard-container">
       <h1>Dashboard form</h1>
+      <h1>Dashboard form2</h1>
+      <h1>Dashboard form2</h1>
+      <h1>Dashboard form2</h1>
     </div>
   </template>
   
